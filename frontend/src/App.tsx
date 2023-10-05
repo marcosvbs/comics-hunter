@@ -1,7 +1,46 @@
+import "./global.css";
+import styles from "./App.module.css";
+
+import { Header } from "./components/Header";
+import { Card } from "./components/Card";
+
+import coverImg from "./assets/comics-cover.png";
+
 export function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <Header />
+
+      <main className={styles.container}>
+        <div className={styles.intro}>
+          <h1>
+            <strong>Encontre</strong> sua próxima leitura
+            <br />
+            <strong>Conheça</strong> leitores como você
+          </h1>
+
+          <form className={styles.searchBar}>
+            <input
+              type="search"
+              id="comics-search"
+              placeholder="Busque por título, editora, escritor(a) ou desenhista"
+            />
+            <button>Buscar</button>
+          </form>
+        </div>
+
+        <div className={styles.cardsList}>
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+          <Card coverImg={coverImg} />
+        </div>
+      </main>
     </>
   );
 }
