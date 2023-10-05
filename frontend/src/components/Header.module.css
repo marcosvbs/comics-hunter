@@ -1,4 +1,6 @@
 .container {
+  height: 5.875rem;
+
   border-bottom: 1px solid var(--gray);
   background: var(--white);
 }

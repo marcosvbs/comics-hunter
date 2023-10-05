@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import { Card } from "./components/Card";
 
 import coverImg from "./assets/comics-cover.png";
+import { Footer } from "./components/Footer";
 
 export function App() {
   return (
@@ -41,6 +42,8 @@ export function App() {
           <Card coverImg={coverImg} />
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }
