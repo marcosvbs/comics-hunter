@@ -1,10 +1,10 @@
 .container {
-  max-width: 10.5rem;
+  max-width: 14rem;
 
   display: flex;
   flex-direction: column;
 
-  justify-content: end;
+  justify-content: start;
 }
 
 img {
