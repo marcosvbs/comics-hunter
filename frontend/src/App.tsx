@@ -3,42 +3,21 @@ import styles from "./App.module.css";
 
 import { Header } from "./components/Header";
 import { Card } from "./components/Card";
-
-import comic1Cover from "./assets/comic1Cover.jpg";
-import comic2Cover from "./assets/comic2Cover.jpg";
-import comic3Cover from "./assets/comic3Cover.jpg";
-
 import { Footer } from "./components/Footer";
 
-const comics: Comic[] = [
-  {
-    coverImg: comic1Cover,
-    title: "Red Goblin #9",
-    writer: "Alex Paknadel",
-    penciler: "Christopher Campana",
-  },
-  {
-    coverImg: comic2Cover,
-    title: "X-Men (2021) #27",
-    writer: "Gerry Duggan",
-    penciler: "Phil Noto",
-  },
-  {
-    coverImg: comic3Cover,
-    title: "Strange Academy: Amazing Spider-Man (2023) #1",
-    writer: "Carlos Hernandez",
-    penciler: "Vasco Georgiev",
-  },
-];
-
 interface Comic {
+  id: number;
   coverImg: string;
   title: string;
   writer: string;
   penciler: string;
 }
 
-export function App() {
+interface AppProps {
+  comics: Comic[];
+}
+
+export function App({ comics }: AppProps) {
   return (
     <>
       <Header />
@@ -65,6 +44,8 @@ export function App() {
           {comics.map((comic) => {
             return (
               <Card
+                key={comic.id}
+                id={comic.id}
                 coverImg={comic.coverImg}
                 title={comic.title}
                 writer={comic.writer}

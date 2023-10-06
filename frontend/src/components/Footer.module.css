@@ -1,4 +1,6 @@
 .container {
+  margin-top: auto;
+
   height: 5.875rem;
 
   background: var(--white);

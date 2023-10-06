@@ -1,6 +1,9 @@
 import styles from "./Card.module.css";
 
+import { Link } from "react-router-dom";
+
 interface CardProps {
+  id: number;
   coverImg: string;
   title: string;
   writer: string;
@@ -14,12 +17,12 @@ function getLastName(fullName: string) {
   return lastName;
 }
 
-export function Card({ coverImg, title, writer, penciler }: CardProps) {
+export function Card({ id, coverImg, title, writer, penciler }: CardProps) {
   const writerLastName = getLastName(writer);
   const pencilerLastName = getLastName(penciler);
 
   return (
-    <div className={styles.container}>
+    <Link to={`/comic/${id}`} className={styles.container}>
       <img src={coverImg} alt="Cover Imagem" />
 
       <h2>{title}</h2>
@@ -27,6 +30,6 @@ export function Card({ coverImg, title, writer, penciler }: CardProps) {
       <span>
         {writerLastName}, {pencilerLastName}
       </span>
-    </div>
+    </Link>
   );
 }

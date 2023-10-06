@@ -1,0 +1,46 @@
+.container {
+  max-width: 80rem;
+
+  padding: 2.5rem 1.5rem 6.25rem;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.content {
+  margin-bottom: auto;
+
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+}
+
+.coverContainer {
+  width: 18.75rem;
+}
+
+.coverContainer img {
+  width: 100%;
+}
+
+.infoContainer {
+  width: 28.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.infoContainer .infoLine {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+}
