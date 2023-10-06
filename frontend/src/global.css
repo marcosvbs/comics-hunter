@@ -1,0 +1,61 @@
+:root {
+  --blue-400: #2472e6;
+  --blue-300: #7eacf1;
+  --blue-200: #c8dcf9;
+  --blue-100: #edf3fd;
+
+  --green-400: #20bf55;
+  --green-100: #eefcf2;
+
+  --orange-400: #f59f00;
+  --orange-100: #fff8eb;
+
+  --pink-400: #d8315b;
+  --pink-100: #fceef1;
+
+  --black: #242423;
+  --gray: #aeaead;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+body,
+input,
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+button,
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+strong {
+  color: var(--blue-400);
+}

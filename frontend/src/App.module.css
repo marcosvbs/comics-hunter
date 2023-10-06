@@ -1,0 +1,67 @@
+.container {
+  max-width: 80rem;
+
+  padding: 6.25rem 1.5rem;
+
+  margin: 0 auto;
+}
+
+.container .intro {
+  padding-bottom: 6.25rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+}
+
+.searchBar input {
+  width: 28.5rem;
+
+  padding: 1rem;
+
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+}
+
+.searchBar input:focus {
+  border: 1px solid transparent;
+  outline: 2px solid var(--blue-400);
+}
+
+.searchBar button {
+  padding: 1rem 1.5rem;
+
+  text-decoration: none;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.searchBar button:hover {
+  background: var(--blue-400);
+}
+
+.cardsList {
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+}
