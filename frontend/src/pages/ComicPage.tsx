@@ -49,7 +49,7 @@ export function ComicPage({
               <InfoField label={"Desenhista"} value={penciler} />
             </div>
 
-            <div className={styles.infoLine}>
+            <div className={styles.descriptionLine}>
               <p>{description}</p>
             </div>
           </div>

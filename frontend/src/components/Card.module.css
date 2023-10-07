@@ -1,5 +1,5 @@
 .container {
-  max-width: 14rem;
+  /* max-width: 14rem; */
 
   text-decoration: none;
   color: var(--black);
@@ -34,16 +34,4 @@
   font-weight: 400;
 
   color: var(--black);
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 11rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .container {
-    max-width: 7rem;
-  }
 }

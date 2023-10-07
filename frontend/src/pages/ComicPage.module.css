@@ -43,10 +43,10 @@
 }
 
 .infoContainer .infoLine {
-  display: flex;
-  flex-direction: row;
+  max-width: 37.5rem;
 
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .infoContainer .infoLine p {

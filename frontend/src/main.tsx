@@ -43,6 +43,72 @@ const comics: Comic[] = [
     description:
       "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
   },
+  {
+    id: 3,
+    coverImg: comic3Cover,
+    publisher: "Marvel",
+    publicationDate: "21 de julho de 2023",
+    title: "Strange Academy: Amazing Spider-Man (2023) #1",
+    writer: "Carlos Hernandez",
+    penciler: "Vasco Georgiev",
+    description:
+      "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
+  },
+  {
+    id: 3,
+    coverImg: comic3Cover,
+    publisher: "Marvel",
+    publicationDate: "21 de julho de 2023",
+    title: "Strange Academy: Amazing Spider-Man (2023) #1",
+    writer: "Carlos Hernandez",
+    penciler: "Vasco Georgiev",
+    description:
+      "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
+  },
+  {
+    id: 3,
+    coverImg: comic3Cover,
+    publisher: "Marvel",
+    publicationDate: "21 de julho de 2023",
+    title: "Strange Academy: Amazing Spider-Man (2023) #1",
+    writer: "Carlos Hernandez",
+    penciler: "Vasco Georgiev",
+    description:
+      "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
+  },
+  {
+    id: 3,
+    coverImg: comic3Cover,
+    publisher: "Marvel",
+    publicationDate: "21 de julho de 2023",
+    title: "Strange Academy: Amazing Spider-Man (2023) #1",
+    writer: "Carlos Hernandez",
+    penciler: "Vasco Georgiev",
+    description:
+      "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
+  },
+  {
+    id: 3,
+    coverImg: comic3Cover,
+    publisher: "Marvel",
+    publicationDate: "21 de julho de 2023",
+    title: "Strange Academy: Amazing Spider-Man (2023) #1",
+    writer: "Carlos Hernandez",
+    penciler: "Vasco Georgiev",
+    description:
+      "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
+  },
+  {
+    id: 3,
+    coverImg: comic3Cover,
+    publisher: "Marvel",
+    publicationDate: "21 de julho de 2023",
+    title: "Strange Academy: Amazing Spider-Man (2023) #1",
+    writer: "Carlos Hernandez",
+    penciler: "Vasco Georgiev",
+    description:
+      "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?",
+  },
 ];
 
 interface Comic {

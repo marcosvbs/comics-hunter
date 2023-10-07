@@ -23,12 +23,14 @@
 }
 
 .searchBar input {
-  width: 28.5rem;
+  max-width: 28.5rem;
 
   padding: 1rem;
 
   border: 1px solid var(--gray);
   border-radius: 8px;
+
+  flex-grow: 1;
 }
 
 .searchBar input:focus {
@@ -50,6 +52,8 @@
   cursor: pointer;
 
   transition: 0.2s;
+
+  flex-grow: 0;
 }
 
 .searchBar button:hover {
@@ -57,17 +61,31 @@
 }
 
 .cardsList {
-  max-width: 100%;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, auto));
+  justify-content: center;
 
   gap: 1.5rem;
 }
 
+@media (max-width: 576px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .searchBar {
+    flex-wrap: wrap;
+  }
+
+  .searchBar input {
+    flex-grow: 1;
+  }
+  .searchBar button {
+    flex-grow: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .cardsList {
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, auto));
   }
 }
