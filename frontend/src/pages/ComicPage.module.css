@@ -18,6 +18,8 @@
 
   flex-wrap: wrap;
 
+  justify-content: center;
+
   gap: 1.5rem;
 }
 
@@ -30,10 +32,12 @@
 }
 
 .infoContainer {
-  width: 28.5rem;
+  width: 20rem;
 
   display: flex;
   flex-direction: column;
+
+  flex-grow: 1;
 
   gap: 2rem;
 }
@@ -43,4 +47,8 @@
   flex-direction: row;
 
   gap: 1rem;
+}
+
+.infoContainer .infoLine p {
+  max-width: 37.5rem;
 }

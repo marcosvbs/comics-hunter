@@ -50,7 +50,7 @@ export function ComicPage({
             </div>
 
             <div className={styles.infoLine}>
-              <InfoField label={"Descrição"} value={description} />
+              <p>{description}</p>
             </div>
           </div>
         </div>

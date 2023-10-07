@@ -35,3 +35,15 @@
 
   color: var(--black);
 }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 11rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 7rem;
+  }
+}
