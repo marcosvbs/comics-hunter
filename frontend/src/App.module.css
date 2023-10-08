@@ -72,6 +72,12 @@
   .container {
     padding: 1.5rem;
   }
+
+  .container .intro {
+    padding-bottom: 2.5rem;
+
+  }
+
   .searchBar {
     flex-wrap: wrap;
   }
