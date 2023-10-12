@@ -1,9 +1,9 @@
 import "./global.css";
 import styles from "./App.module.css";
 
-import { Header } from "./components/Header";
-import { Card } from "./components/Card";
-import { Footer } from "./components/Footer";
+import { Header } from "./components/Header/Header";
+import { Card } from "./components/Card/Card";
+import { Footer } from "./components/Footer/Footer";
 
 interface Comic {
   id: number;

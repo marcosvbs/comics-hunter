@@ -1,7 +1,7 @@
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { HomeLink } from "../components/HomeLink";
-import { InfoField } from "../components/InfoField";
+import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/Header/Header";
+import { HomeLink } from "../components/HomeLink/HomeLink";
+import { InfoField } from "../components/InfoField/InfoField";
 
 import styles from "./ComicPage.module.css";
 

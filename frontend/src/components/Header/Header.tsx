@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import comicsHunterLogo from "../assets/comicsHunterLogo.png";
+import comicsHunterLogo from "../../assets/comicsHunterLogo.png";
 import styles from "./Header.module.css";
 
 export function Header() {
