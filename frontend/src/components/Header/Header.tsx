@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 import comicsHunterLogo from "../../assets/comicsHunterLogo.png";
-import styles from "./Header.module.css";
+import { StyledHeader } from "./Header.styles";
 
 export function Header() {
   return (
-    <header className={styles.container}>
-      <nav className={styles.content}>
+    <StyledHeader>
+      <nav className="content">
         <Link to={"/"}>
-          <img src={comicsHunterLogo} alt="Comics Hunter Logo" />{" "}
+          <img src={comicsHunterLogo} alt="Comics Hunter Logo" />
         </Link>
 
         <div>
-          <a className={styles.textLink} href="#">
+          <a className="textLink" href="#">
             Criar conta
           </a>
 
-          <a className={styles.containedLink} href="#">
+          <a className="containedLink" href="#">
             Acessar conta
           </a>
         </div>
       </nav>
-    </header>
+    </StyledHeader>
   );
 }

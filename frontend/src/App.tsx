@@ -1,9 +1,12 @@
-import "./global.css";
-import styles from "./App.module.css";
-
 import { Header } from "./components/Header/Header";
 import { Card } from "./components/Card/Card";
 import { Footer } from "./components/Footer/Footer";
+
+import { GlobalStyle } from "./styles/global";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./styles/themes/default";
+
+import { StyledApp } from "./App.styles";
 
 interface Comic {
   id: number;
@@ -19,18 +22,18 @@ interface AppProps {
 
 export function App({ comics }: AppProps) {
   return (
-    <>
+    <ThemeProvider theme={defaultTheme}>
       <Header />
 
-      <main className={styles.container}>
-        <div className={styles.intro}>
+      <StyledApp>
+        <div className="intro">
           <h1>
             <strong>Encontre</strong> sua próxima leitura
             <br />
             <strong>Conheça</strong> leitores como você
           </h1>
 
-          <form className={styles.searchBar}>
+          <form className="searchBar">
             <input
               type="search"
               id="comics-search"
@@ -40,7 +43,7 @@ export function App({ comics }: AppProps) {
           </form>
         </div>
 
-        <div className={styles.cardsList}>
+        <div className="cardsList">
           {comics.map((comic) => {
             return (
               <Card
@@ -54,9 +57,11 @@ export function App({ comics }: AppProps) {
             );
           })}
         </div>
-      </main>
+      </StyledApp>
 
       <Footer />
-    </>
+
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }

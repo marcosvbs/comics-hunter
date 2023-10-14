@@ -1,4 +1,4 @@
-import styles from "./InfoField.module.css";
+import { StyledInfoField } from "./InfoField.styles";
 
 interface InfoFieldProps {
   label: string;
@@ -7,9 +7,9 @@ interface InfoFieldProps {
 
 export function InfoField({ label, value }: InfoFieldProps) {
   return (
-    <div className={styles.container}>
-      <span className={styles.label}>{label}</span>
-      <span className={styles.value}>{value}</span>
-    </div>
+    <StyledInfoField>
+      <span className="label">{label}</span>
+      <span className="value">{value}</span>
+    </StyledInfoField>
   );
 }

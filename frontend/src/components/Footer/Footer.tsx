@@ -1,13 +1,13 @@
-import styles from "./Footer.module.css";
+import { StyledFooter } from "./Footer.styles";
 
 export function Footer() {
   return (
-    <footer className={styles.container}>
+    <StyledFooter>
       <span>
         Comics Hunter 2023
         <br />
         Todos os direitos reservados
       </span>
-    </footer>
+    </StyledFooter>
   );
 }
