@@ -1,6 +1,6 @@
-import styles from "./Card.module.css";
-
 import { Link } from "react-router-dom";
+
+import { StyledCard } from "./Card.styles";
 
 interface CardProps {
   id: number;
@@ -22,14 +22,16 @@ export function Card({ id, coverImg, title, writer, penciler }: CardProps) {
   const pencilerLastName = getLastName(penciler);
 
   return (
-    <Link to={`/comic/${id}`} className={styles.container}>
-      <img src={coverImg} alt="Cover Imagem" />
+    <StyledCard>
+      <Link to={`/comic/${id}`} className="link">
+        <img src={coverImg} alt="Cover Imagem" />
 
-      <h2>{title}</h2>
+        <h2>{title}</h2>
 
-      <span>
-        {writerLastName}, {pencilerLastName}
-      </span>
-    </Link>
+        <span>
+          {writerLastName}, {pencilerLastName}
+        </span>
+      </Link>
+    </StyledCard>
   );
 }

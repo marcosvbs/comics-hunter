@@ -1,9 +1,12 @@
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { HomeLink } from "../components/HomeLink";
-import { InfoField } from "../components/InfoField";
+import { ThemeProvider } from "styled-components";
+import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/Header/Header";
+import { HomeLink } from "../components/HomeLink/HomeLink";
+import { InfoField } from "../components/InfoField/InfoField";
 
-import styles from "./ComicPage.module.css";
+import { StyledComicPage } from "./ComicPage.styles";
+import { defaultTheme } from "../styles/themes/default";
+import { GlobalStyle } from "../styles/global";
 
 interface ComicPageProps {
   coverImg: string;
@@ -25,38 +28,40 @@ export function ComicPage({
   description,
 }: ComicPageProps) {
   return (
-    <>
+    <ThemeProvider theme={defaultTheme}>
       <Header />
 
-      <main className={styles.container}>
+      <StyledComicPage>
         <HomeLink />
 
-        <div className={styles.content}>
-          <div className={styles.coverContainer}>
+        <div className="content">
+          <div className="coverContainer">
             <img src={coverImg} alt="Cover Imagem" />
           </div>
 
-          <div className={styles.infoContainer}>
+          <div className="infoContainer">
             <h1>{title}</h1>
 
-            <div className={styles.infoLine}>
+            <div className="infoLine">
               <InfoField label={"Editora"} value={publisher} />
               <InfoField label={"Data de publicação"} value={publicationDate} />
             </div>
 
-            <div className={styles.infoLine}>
+            <div className="infoLine">
               <InfoField label={"Escritor"} value={writer} />
               <InfoField label={"Desenhista"} value={penciler} />
             </div>
 
-            <div className={styles.infoLine}>
-              <InfoField label={"Descrição"} value={description} />
+            <div className="descriptionLine">
+              <p>{description}</p>
             </div>
           </div>
         </div>
-      </main>
+      </StyledComicPage>
 
       <Footer />
-    </>
+
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
