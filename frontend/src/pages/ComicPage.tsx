@@ -7,6 +7,7 @@ import { InfoField } from "../components/InfoField/InfoField";
 import { StyledComicPage } from "./ComicPage.styles";
 import { defaultTheme } from "../styles/themes/default";
 import { GlobalStyle } from "../styles/global";
+import { ReadingStatusButton } from "../components/ReadingStatusButton";
 
 interface ComicPageProps {
   coverImg: string;
@@ -55,6 +56,22 @@ export function ComicPage({
             <div className="descriptionLine">
               <p>{description}</p>
             </div>
+          </div>
+
+          <div className="readingStatusContainer">
+            <h2>Eai, já leu esse?</h2>
+
+            <ul>
+              <li>
+                <ReadingStatusButton statusType={"read"} />
+              </li>
+              <li>
+                <ReadingStatusButton statusType={"reading"} />
+              </li>
+              <li>
+                <ReadingStatusButton statusType={"to-read"} />
+              </li>
+            </ul>
           </div>
         </div>
       </StyledComicPage>
