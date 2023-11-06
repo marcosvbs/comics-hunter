@@ -52,6 +52,30 @@ export const StyledComicPage = styled.main`
     max-width: 37.5rem;
   }
 
+  .statusContainer {
+    min-width: 18.75rem;
+    height: fit-content;
+
+    padding: 1.5rem;
+
+    border: 1px solid ${(props) => props.theme.black};
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+  }
+
+  .statusContainer ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
   @media (max-width: 576px) {
     padding: 2.5rem 1.5rem;
 

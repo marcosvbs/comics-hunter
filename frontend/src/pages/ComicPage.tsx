@@ -58,12 +58,12 @@ export function ComicPage({
             </div>
           </div>
 
-          <div className="readingStatusContainer">
+          <div className="statusContainer">
             <h2>Eai, já leu esse?</h2>
 
             <ul>
               <li>
-                <ReadingStatusButton statusType={"read"} />
+                <ReadingStatusButton selected statusType={"read"} />
               </li>
               <li>
                 <ReadingStatusButton statusType={"reading"} />

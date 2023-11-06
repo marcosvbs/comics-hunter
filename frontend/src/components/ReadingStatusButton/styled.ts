@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.button`
-  padding: 0.625rem 1.5rem 0.625rem 1rem;
+  width: 100%;
+
+  padding: 0.5rem 1rem;
 
   color: ${(props) => props.theme.black};
   background: ${(props) => props.theme.white};
@@ -11,6 +13,7 @@ const Container = styled.button`
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   gap: 0.5rem;
 
@@ -33,6 +36,14 @@ export const ReadButton = styled(Container)`
 
     border: 1px solid ${(props) => props.theme["green-400"]};
   }
+
+  &.selected {
+    color: ${(props) => props.theme.white};
+
+    background: ${(props) => props.theme["green-400"]};
+
+    border: 1px solid transparent;
+  }
 `;
 
 export const ReadingButton = styled(Container)`
@@ -43,6 +54,14 @@ export const ReadingButton = styled(Container)`
 
     border: 1px solid ${(props) => props.theme["orange-400"]};
   }
+
+  &:active {
+    color: ${(props) => props.theme.white};
+
+    background: ${(props) => props.theme["orange-400"]};
+
+    border: 1px solid transparent;
+  }
 `;
 
 export const ToReadButton = styled(Container)`
@@ -52,5 +71,13 @@ export const ToReadButton = styled(Container)`
     background: ${(props) => props.theme["pink-100"]};
 
     border: 1px solid ${(props) => props.theme["pink-400"]};
+  }
+
+  &.active {
+    color: ${(props) => props.theme.white};
+
+    background: ${(props) => props.theme["pink-400"]};
+
+    border: 1px solid transparent;
   }
 `;
