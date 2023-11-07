@@ -1,13 +1,15 @@
 import { ThemeProvider } from "styled-components";
-import { Footer } from "../components/Footer/Footer";
-import { Header } from "../components/Header/Header";
-import { HomeLink } from "../components/HomeLink/HomeLink";
-import { InfoField } from "../components/InfoField/InfoField";
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import { HomeLink } from "../../components/HomeLink";
+import { InfoField } from "../../components/InfoField";
 
-import { StyledComicPage } from "./ComicPage.styles";
-import { defaultTheme } from "../styles/themes/default";
-import { GlobalStyle } from "../styles/global";
-import { ReadingStatusButton } from "../components/ReadingStatusButton";
+import { StyledComicPage } from "./styles";
+import { defaultTheme } from "../../styles/themes/default";
+import { GlobalStyle } from "../../styles/global";
+import { StatusController, Status } from "../../components/StatusController";
+
+import { useState } from "react";
 
 interface ComicPageProps {
   coverImg: string;
@@ -28,6 +30,12 @@ export function ComicPage({
   penciler,
   description,
 }: ComicPageProps) {
+  const [readingStatus, setReadingStatus] = useState<Status>("");
+
+  function changeStatus(newStatus: Status) {
+    setReadingStatus(newStatus);
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Header />
@@ -58,21 +66,10 @@ export function ComicPage({
             </div>
           </div>
 
-          <div className="statusContainer">
-            <h2>Eai, já leu esse?</h2>
-
-            <ul>
-              <li>
-                <ReadingStatusButton selected statusType={"read"} />
-              </li>
-              <li>
-                <ReadingStatusButton statusType={"reading"} />
-              </li>
-              <li>
-                <ReadingStatusButton statusType={"to-read"} />
-              </li>
-            </ul>
-          </div>
+          <StatusController
+            currentStatus={readingStatus}
+            changeStatus={changeStatus}
+          />
         </div>
       </StyledComicPage>
 

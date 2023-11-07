@@ -1,4 +1,4 @@
-import { StyledInfoField } from "./InfoField.styles";
+import { StyledInfoField } from "./styles";
 
 interface InfoFieldProps {
   label: string;

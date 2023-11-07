@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledHomeLink } from "./HomeLink.styles";
+import { StyledHomeLink } from "./styles";
 
 export function HomeLink() {
   return (

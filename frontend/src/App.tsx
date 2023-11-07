@@ -1,6 +1,6 @@
-import { Header } from "./components/Header/Header";
-import { Card } from "./components/Card/Card";
-import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header";
+import { Card } from "./components/Card";
+import { Footer } from "./components/Footer";
 
 import { GlobalStyle } from "./styles/global";
 import { ThemeProvider } from "styled-components";

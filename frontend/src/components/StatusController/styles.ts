@@ -1,6 +1,40 @@
 import styled from "styled-components";
 
-const Container = styled.button`
+export const ControllerContainer = styled.div`
+  min-width: 18.75rem;
+  height: fit-content;
+
+  padding: 1.5rem;
+
+  border: 1px solid ${(props) => props.theme.black};
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .material-symbols-outlined {
+    font-size: 1.25rem;
+
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+`;
+
+const ChangeStatusButton = styled.button`
   width: 100%;
 
   padding: 0.5rem 1rem;
@@ -17,18 +51,10 @@ const Container = styled.button`
 
   gap: 0.5rem;
 
-  .material-symbols-outlined {
-    font-size: 1.25rem;
-
-    font-variation-settings:
-      "FILL" 1,
-      "wght" 400,
-      "GRAD" 0,
-      "opsz" 24;
-  }
+  cursor: pointer;
 `;
 
-export const ReadButton = styled(Container)`
+export const ReadButton = styled(ChangeStatusButton)`
   &:hover {
     color: ${(props) => props.theme["green-400"]};
 
@@ -46,7 +72,7 @@ export const ReadButton = styled(Container)`
   }
 `;
 
-export const ReadingButton = styled(Container)`
+export const ReadingButton = styled(ChangeStatusButton)`
   &:hover {
     color: ${(props) => props.theme["orange-400"]};
 
@@ -55,7 +81,7 @@ export const ReadingButton = styled(Container)`
     border: 1px solid ${(props) => props.theme["orange-400"]};
   }
 
-  &:active {
+  &.selected {
     color: ${(props) => props.theme.white};
 
     background: ${(props) => props.theme["orange-400"]};
@@ -64,7 +90,7 @@ export const ReadingButton = styled(Container)`
   }
 `;
 
-export const ToReadButton = styled(Container)`
+export const ToReadButton = styled(ChangeStatusButton)`
   &:hover {
     color: ${(props) => props.theme["pink-400"]};
 
@@ -73,7 +99,7 @@ export const ToReadButton = styled(Container)`
     border: 1px solid ${(props) => props.theme["pink-400"]};
   }
 
-  &.active {
+  &.selected {
     color: ${(props) => props.theme.white};
 
     background: ${(props) => props.theme["pink-400"]};

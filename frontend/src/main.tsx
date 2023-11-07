@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { ComicPage } from "./pages/ComicPage.tsx";
+import { ComicPage } from "./pages/ComicPage/index.tsx";
 import { App } from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { StyledCard } from "./Card.styles";
+import { StyledCard } from "./styles";
 
 interface CardProps {
   id: number;

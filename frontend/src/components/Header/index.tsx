@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import comicsHunterLogo from "../../assets/comicsHunterLogo.png";
-import { StyledHeader } from "./Header.styles";
+import { StyledHeader } from "./styles";
 
 export function Header() {
   return (
