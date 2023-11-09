@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import comicsHunterLogo from "../../assets/comicsHunterLogo.png";
 import { StyledHeader } from "./styles";
 
@@ -6,9 +5,9 @@ export function Header() {
   return (
     <StyledHeader>
       <nav className="content">
-        <Link to={"/"}>
+        <a>
           <img src={comicsHunterLogo} alt="Comics Hunter Logo" />
-        </Link>
+        </a>
 
         <div>
           <a className="textLink" href="#">

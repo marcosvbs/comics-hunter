@@ -1,0 +1,49 @@
+{
+  "comics": [
+    {
+      "id": 1,
+      "coverImg": "/src/assets/comic1Cover.jpg",
+      "title": "Red Goblin #9",
+      "publisher": "Marvel",
+      "publicationDate": "2023-11-09T10:51:49.072Z",
+      "writer": "Alex Paknadel",
+      "penciler": "Christopher Campana",
+      "description": "Normie Osborn está se perdendo na influência corruptora de seu simbionte – mas sua família e DYLAN BROCK estão prontos para dar um empurrão final para salvar Normie de si!"
+    },
+    {
+      "id": 2,
+      "coverImg": "/src/assets/comic2Cover.jpg",
+      "title": "X-Men (2021) #27",
+      "publisher": "Marvel",
+      "publicationDate": "2023-11-09T10:51:49.072Z",
+      "writer": "Gerry Duggan",
+      "penciler": "Phil Noto",
+      "description": "ALGO CHAMOU SUA ATENÇÃO? Quando Ciclope se juntou a esta iteração dos X-Men, sua proposta era simples - “Eu sou um X-Men”. Se é assim, os inimigos dos X-Men parecem ter essa luta toda costurada."
+    },
+    {
+      "id": 3,
+      "coverImg": "/src/assets/comic3Cover.jpg",
+      "title": "Strange Academy: Amazing Spider-Man (2023) #1",
+      "publisher": "Marvel",
+      "publicationDate": "2023-11-09T10:51:49.072Z",
+      "writer": "Carlos Hernandez",
+      "penciler": "Vasco Georgiev",
+      "description": "O brilhante novo vilão O EQUAÇÃO derrubou Miles Morales, Moon Knight e metade dos alunos da Strange Academy. O INCRÍVEL HOMEM-ARANHA pode ajudar?"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com"
+    }
+  ],
+  "readingLists": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "book_id": 1,
+      "status": "reading"
+    }
+  ]
+}

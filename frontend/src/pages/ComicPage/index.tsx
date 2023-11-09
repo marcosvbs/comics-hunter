@@ -1,6 +1,4 @@
 import { ThemeProvider } from "styled-components";
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
 import { HomeLink } from "../../components/HomeLink";
 import { InfoField } from "../../components/InfoField";
 
@@ -9,9 +7,15 @@ import { defaultTheme } from "../../styles/themes/default";
 import { GlobalStyle } from "../../styles/global";
 import { StatusController, Status } from "../../components/StatusController";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 interface ComicPageProps {
+  comicId: number;
+}
+
+interface Comic {
+  id: number;
   coverImg: string;
   title: string;
   publisher: string;
@@ -21,16 +25,29 @@ interface ComicPageProps {
   description: string;
 }
 
-export function ComicPage({
-  coverImg,
-  title,
-  publisher,
-  publicationDate,
-  writer,
-  penciler,
-  description,
-}: ComicPageProps) {
+export function ComicPage({ comicId }: ComicPageProps) {
+  const [comic, setComic] = useState<Comic>({
+    id: 0,
+    coverImg: "",
+    title: "string",
+    publisher: "string",
+    publicationDate: "",
+    writer: "",
+    penciler: "",
+    description: "",
+  });
   const [readingStatus, setReadingStatus] = useState<Status>("");
+
+  async function loadComic() {
+    const response = await axios.get(`http://localhost:3000/comics/${comicId}`);
+    const data = await response.data;
+
+    setComic(data);
+  }
+
+  useEffect(() => {
+    loadComic();
+  }, []);
 
   function changeStatus(newStatus: Status) {
     setReadingStatus(newStatus);
@@ -38,31 +55,32 @@ export function ComicPage({
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Header />
-
       <StyledComicPage>
         <HomeLink />
 
         <div className="content">
           <div className="coverContainer">
-            <img src={coverImg} alt="Cover Imagem" />
+            <img src={comic.coverImg} alt="Cover Imagem" />
           </div>
 
           <div className="infoContainer">
-            <h1>{title}</h1>
+            <h1>{comic.title}</h1>
 
             <div className="infoLine">
-              <InfoField label={"Editora"} value={publisher} />
-              <InfoField label={"Data de publicação"} value={publicationDate} />
+              <InfoField label={"Editora"} value={comic.publisher} />
+              <InfoField
+                label={"Data de publicação"}
+                value={comic.publicationDate}
+              />
             </div>
 
             <div className="infoLine">
-              <InfoField label={"Escritor"} value={writer} />
-              <InfoField label={"Desenhista"} value={penciler} />
+              <InfoField label={"Escritor"} value={comic.writer} />
+              <InfoField label={"Desenhista"} value={comic.penciler} />
             </div>
 
             <div className="descriptionLine">
-              <p>{description}</p>
+              <p>{comic.description}</p>
             </div>
           </div>
 
@@ -72,8 +90,6 @@ export function ComicPage({
           />
         </div>
       </StyledComicPage>
-
-      <Footer />
 
       <GlobalStyle />
     </ThemeProvider>
